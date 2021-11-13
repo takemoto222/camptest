@@ -1,0 +1,141 @@
+.mypage_main {
+    width: 700px;
+    background: #fff;
+    margin: auto;
+    margin-top: 10%;
+}
+
+.profile {
+    display: flex;
+    position: relative;
+}
+
+.my_img {
+    left: 40%;
+    border: 1px solid #696969;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    margin-left: 5%;
+}
+
+.my_page_img {
+    border: 1px solid #696969;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+
+.my_name_ev {
+    right: 60%;
+    margin-left: 30px;
+    flex: auto;
+    min-width: 10px; /*メインは横いっぱいに広がって欲しい*/
+    /*余白*/
+}
+
+.my_name {
+    font-size: 25px;
+    margin-top: 40px;
+}
+
+.my_ev {
+    font-size: 15px;
+}
+
+.mypage_edit_button {
+    text-decoration: none;
+    color: #696969;
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+}
+
+/*自己紹介テキストエリア*/
+.pro_textarea_box {
+    width: 100%;
+}
+
+.profile_area {
+    width: 100%;
+}
+/*上ここまで*/
+/*下*/
+.mypage_menu {
+}
+
+.mypage_ul {
+    margin-top: 30px;
+}
+
+.mypage_li {
+    list-style: none;
+    border: 1px solid #918d8d;
+    padding: 15px 10px;
+    margin-bottom: 1px;
+}
+
+.mypage_a {
+    text-decoration: none;
+    color: #696969;
+}
+
+.mypage_a:hover {
+    color: #a6a6a6;
+}
+/*ボタン*/
+.buttons {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.top_button {
+}
+
+.top_button_a {
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    background: rgb(36, 76, 252);
+    color: #fff;
+    overflow: hidden;
+    border: 1px solid rgb(36, 76, 252);
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    text-align: center;
+    padding: 25px 18px;
+}
+
+.top_button:hover {
+    color: #fff;
+    border-radius: 50%;
+}
+
+.listing_button {
+}
+
+.listing_button_a {
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    background: rgb(255, 44, 44);
+    color: #fff;
+    overflow: hidden;
+    border: 1px solid rgb(255, 44, 44);
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    margin-left: 90px;
+    text-align: center;
+    padding: 25px 20px;
+}
+
+.listing_button:hover {
+    color: #fff;
+}
+
+/*ボタンおわり*/

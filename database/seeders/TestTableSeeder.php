@@ -1,0 +1,27 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+
+
+
+class TestTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        $param = [
+            'name' => 'tony',
+            'email' => 'omo@ezweb.ne.jp',
+            'age' => 25,
+        ];
+        DB::table('test')->insert($param);
+        return redirect('/');
+    }
+}
