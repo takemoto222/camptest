@@ -30,7 +30,7 @@
           <!--mypage.edit.bladeで行った編集内容を表示させたい-->
           <form action="/index" method="get">
             @csrf
-            <h2 class="my_name">{{$items->name}}</h2>
+            <h2 class="my_name">{{$item->getDetail()}}</h2>
           </form>
           <h2 class="my_name"></h2>
           <!--編集とは別-->

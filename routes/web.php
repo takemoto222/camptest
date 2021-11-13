@@ -6,4 +6,3 @@ use App\Http\Controllers\TestController;
 
 
 Route::get('/index', [TestController::class, 'index']);
-Route::post('/index', [TestController::class, 'index']);
