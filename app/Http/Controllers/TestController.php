@@ -13,4 +13,10 @@ class TestController extends Controller
         $items = Test::all();
         return view('index', ['items' => $items]);
     }
+    public function create(Request $request)
+    {
+        $form = $request->all();
+        Test::create($form);
+        return redirect('/');
+    }
 }

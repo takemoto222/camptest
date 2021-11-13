@@ -5,4 +5,5 @@ use App\Http\Controllers\TestController;
 
 
 
-Route::get('/index', [TestController::class, 'index']);
+Route::get('/', [TestController::class, 'index']);
+Route::post('/', [TestController::class, 'create']);

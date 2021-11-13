@@ -40,6 +40,14 @@
     margin-top: 40px;
 }
 
+/*名前のエリア*/
+.name_area {
+    width: 150px;
+    height: 35px;
+    font-size: 30px;
+    border: none;
+}
+
 .my_ev {
     font-size: 15px;
 }

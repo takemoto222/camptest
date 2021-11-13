@@ -12,14 +12,15 @@
 
 
     <header>
-      <h1 class="app_title_logo">アプリタイトル</h1>
+      <h1 class="app_title_logo"></h1>
     </header>
-
-    <form action="/index" method="post">
+    @foreach ($items as $item)
+    <form action="/" method="post">
       @csrf
       <input type="text" name="name">
       <input type="submit">
     </form>
+
     <main class="mypage_main">
       <div class="profile">
         <!--mypage.edit.bladeで行った編集内容を表示させたい-->
@@ -30,9 +31,10 @@
           <!--mypage.edit.bladeで行った編集内容を表示させたい-->
           <form action="/index" method="get">
             @csrf
-            <h2 class="my_name">{{$item->getDetail()}}</h2>
+
+
+            <input class="name_area" type="text" name="name" value="{{$item->name}}">
           </form>
-          <h2 class="my_name"></h2>
           <!--編集とは別-->
           <p class="my_ev">評価</p>
           <p>★ ★ ★ ★ ★</p>
@@ -55,6 +57,7 @@
           <li class="mypage_li"><a href="/contact" class="mypage_a">お問い合わせ</a></li>
         </ul>
       </div>
+      @endforeach
 
       <!--ボタン-->
       <div class="buttons">
