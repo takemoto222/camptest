@@ -4,13 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
-use App\Models\Camp;
+use App\Models\Test;
 
 class TestController extends Controller
 {
     public function index()
     {
-        $items = Camp::all();
+        $items = Test::all();
         return view('index', ['items' => $items]);
     }
 }

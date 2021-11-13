@@ -21,7 +21,7 @@ class TestTableSeeder extends Seeder
             'email' => 'omo@ezweb.ne.jp',
             'age' => 25,
         ];
-        DB::table('test')->insert($param);
+        DB::table('tests')->insert($param);
         return redirect('/');
     }
 }
