@@ -31,8 +31,6 @@
           <!--mypage.edit.bladeで行った編集内容を表示させたい-->
           <form action="/index" method="get">
             @csrf
-
-
             <input class="name_area" type="text" name="name" value="{{$item->name}}">
           </form>
           <!--編集とは別-->
