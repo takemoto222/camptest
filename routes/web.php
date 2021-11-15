@@ -4,6 +4,15 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestController;
 
 
-
+//練習
 Route::get('/', [TestController::class, 'index']);
 Route::post('/', [TestController::class, 'create']);
+Route::post('/update', [TestController::class, 'update']);
+//練習
+
+
+//後
+//マイページ編集
+Route::get('/mypage_edit', [TestController::class, 'mypage_edit']);
+//ユーザーページ
+Route::get('/user_page', [TestController::class, 'user_page']);

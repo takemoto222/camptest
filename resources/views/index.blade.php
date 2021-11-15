@@ -1,3 +1,9 @@
+<!---->
+<!--質問しているファイルです、bladeはこのファイルのみ使用中です-->
+<!---->
+
+
+
 <!DOCTYPE thml>
 
 <thml>
@@ -14,12 +20,13 @@
     <header>
       <h1 class="app_title_logo"></h1>
     </header>
-    @foreach ($items as $item)
-    <form action="/" method="post">
+    <!--検索スペース-->
+    <form action="/update" method="post">
       @csrf
-      <input type="text" name="name">
-      <input type="submit">
+      <input type="text" name="name" placeholder="名前">
+      <input type="submit" value="更新">
     </form>
+    <!--検索スペースここまで-->
 
     <main class="mypage_main">
       <div class="profile">
@@ -31,8 +38,10 @@
           <!--mypage.edit.bladeで行った編集内容を表示させたい-->
           <form action="/index" method="get">
             @csrf
+            @foreach ($items as $item)
             <input class="name_area" type="text" name="name" value="{{$item->name}}">
           </form>
+          @endforeach
           <!--編集とは別-->
           <p class="my_ev">評価</p>
           <p>★ ★ ★ ★ ★</p>
@@ -41,6 +50,7 @@
           <a href="/mypage_edit" class="mypage_edit_button">マイページ編集</a>
         </div>
       </div>
+
       <!--メイン-->
       <div class="mypage_menu">
         <ul class="mypage_ul">
@@ -55,7 +65,7 @@
           <li class="mypage_li"><a href="/contact" class="mypage_a">お問い合わせ</a></li>
         </ul>
       </div>
-      @endforeach
+
 
       <!--ボタン-->
       <div class="buttons">

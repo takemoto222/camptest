@@ -1,0 +1,121 @@
+/* Simple Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body */
+body {
+    background: #e9e9e9;
+    font: 400 87.5%/1.5em "Open Sans", sans-serif;
+}
+
+/* Form Layout 全体*/
+.inner_box_wrapper {
+    background: #fff;
+    margin: 5% auto;
+    width: 700px;
+}
+
+/*ヘッダー部分*/
+.header_list {
+    width: 100%;
+    height: 60px;
+    background: rgb(209, 207, 207);
+    display: flex;
+    justify-content: space-between;
+}
+
+.h1_ttl {
+    margin-left: 35%;
+    margin-top: 22px;
+    font-size: 22px;
+    color: #696969;
+}
+
+.nav_list {
+    display: flex;
+}
+.li {
+    list-style: none;
+    width: 30px;
+    height: 30px;
+    background: #eee;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    text-align: center;
+    margin-top: 15px;
+    margin-right: 20px;
+}
+
+.nav_list_a {
+}
+
+.img_icon {
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+}
+
+/*メイン*/
+
+.profile {
+    display: flex;
+    width: 100%;
+    margin: 30px 0px;
+}
+
+.my_img {
+    background: #eee;
+    width: 40%;
+    border: 1px solid #696969;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    margin-left: 5%;
+}
+
+.my_page_img {
+    border: 1px solid #696969;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+
+.my_name_ev {
+    width: 60%;
+    margin-left: 30px;
+    flex: auto;
+    min-width: 10px; /*メインは横いっぱいに広がって欲しい*/
+    /*余白*/
+}
+
+.my_name {
+    font-size: 25px;
+    margin-top: 40px;
+}
+
+/*名前のエリア*/
+.name_area {
+    width: 150px;
+    height: 35px;
+    font-size: 30px;
+    border: none;
+}
+
+.my_ev {
+    font-size: 15px;
+}
+
+/*自己紹介*/
+.textarea_form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.textarea {
+    width: 100%;
+}
