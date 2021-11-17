@@ -34,7 +34,7 @@
       </header>
       <!--メイン-->
       <!--追加機能-->
-      <form action="/" method="post">
+      <form action="/update" method="post">
         @csrf
         <input type="text" name="name" placeholder="名前">
         <input type="submit" value="更新">
@@ -46,9 +46,10 @@
         </div>
         <div class="my_name_ev">
           <!--更新させたい-->
-          <form action="/" method="get">
+          @foreach ($items as $item)
+          <form action="/update" method="get">
             @csrf
-            @foreach ($items as $item)
+
             <input class="name_area" type="text" name="name" value="{{$item->name}}">
           </form>
           @endforeach

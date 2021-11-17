@@ -22,10 +22,9 @@ class TestController extends Controller
     }
     public function update(Request $request)
     {
-        $item = Test::find($request->id);
-        $form = $request->all();
-        $item->fill($form)->save();
-        Test::where('id', $request->id)->update($form);
+        $form = $request->all('name'); //名前を更新したいのでnameを指定しました
+        unset($form['_token']);
+        Test::where('name', $request->name)->update($form); //↑と同じ理由でnameを指定しました
         return redirect('/');
     }
     //練習
