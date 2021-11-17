@@ -12,6 +12,8 @@ Route::post('/update', [TestController::class, 'update']);
 
 
 //後
+//新規会員登録
+Route::get('/sineup', [TestController::class, 'sineup']);
 //マイページ編集
 Route::get('/mypage_edit', [TestController::class, 'mypage_edit']);
 //ユーザーページ

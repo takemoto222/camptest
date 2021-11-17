@@ -21,7 +21,7 @@
       <h1 class="app_title_logo"></h1>
     </header>
     <!--検索スペース-->
-    <form action="/update" method="post">
+    <form action="/" method="post">
       @csrf
       <input type="text" name="name" placeholder="名前">
       <input type="submit" value="更新">
@@ -36,7 +36,9 @@
         </div>
         <div class="my_name_ev">
           <!--mypage.edit.bladeで行った編集内容を表示させたい-->
-          <form action="/index" method="get">
+
+
+          <form action="/" method="get">
             @csrf
             @foreach ($items as $item)
             <input class="name_area" type="text" name="name" value="{{$item->name}}">

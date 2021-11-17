@@ -22,15 +22,21 @@ class TestController extends Controller
     }
     public function update(Request $request)
     {
-        $item = Test::find($request->name);
+        $item = Test::find($request->id);
         $form = $request->all();
         $item->fill($form)->save();
+        Test::where('id', $request->id)->update($form);
         return redirect('/');
     }
     //練習
 
 
     //後
+    //新規会員登録
+    public function sineup()
+    {
+        return view('sineup');
+    }
     //マイページ編集
     public function mypage_edit()
     {
