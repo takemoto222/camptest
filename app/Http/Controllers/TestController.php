@@ -42,9 +42,4 @@ class TestController extends Controller
     {
         return view('mypage_edit');
     }
-    //ユーザーページ
-    public function user_page()
-    {
-        return view('user_page');
-    }
 }

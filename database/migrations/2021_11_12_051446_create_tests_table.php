@@ -17,7 +17,7 @@ class CreateTestsTable extends Migration
             $table->id();
             $table->string('name', 255);
             $table->string('email')->nullable();
-            $table->integer('age')->nullable();
+            $table->integer('')->nullable();
             $table->timestamps();
         });
     }
