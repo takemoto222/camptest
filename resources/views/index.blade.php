@@ -46,13 +46,14 @@
         </div>
         <div class="my_name_ev">
           <!--更新させたい-->
-          @foreach ($items as $item)
+          <!--@foreach ($items as $item)-->
           <form action="/update" method="get">
             @csrf
 
-            <input class="name_area" type="text" name="name" value="{{$item->name}}">
+            <input class="name_area" type="text" name="name" value="{{$items->name}}">
           </form>
-          @endforeach
+
+          <!--@endforeach-->
 
           <p class="my_ev">評価</p>
           <p>★ ★ ★ ★ ★</p>
