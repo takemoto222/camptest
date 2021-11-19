@@ -9,10 +9,9 @@ use App\Models\Test;
 class TestController extends Controller
 {
     //練習
-    public function index($id)
+    public function index()
     {
-        // $items = Test::all();
-        $items = Test::find($id);
+        $items = Test::all();
         return view('index', ['items' => $items]);
     }
     public function create(Request $request)
