@@ -9,9 +9,9 @@ use App\Models\Test;
 class TestController extends Controller
 {
     //練習
-    public function index()
+    public function index($id)
     {
-        $items = Test::all();
+        $items = Test::find($id); //テストからIDを取得、idを特定 $itemの渡す
         return view('index', ['items' => $items]);
     }
     public function create(Request $request)
@@ -22,10 +22,9 @@ class TestController extends Controller
     }
     public function update(Request $request)
     {
-        $form = $request->all('name'); //名前を更新したいのでnameを指定しました
-        unset($form['_token']);
-        Test::where('name', $request->name)->update($form); //↑と同じ理由でnameを指定しました
-        return redirect('/');
+        $form = $request->all('name'); //nameをデータベースから全て取り出す formに渡す
+        Test::where('id', $request->id)->update($form); //'id', $request->idで更新するIDを特定、update($form)でnameを更新
+        return redirect("/{$request->id}");
     }
     //練習
 

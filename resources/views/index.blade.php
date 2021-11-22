@@ -30,12 +30,14 @@
         </nav>
       </header>
       <!--メイン-->
-      <!--追加機能-->
+
+      <!--追加機能
       <form action="/update" method="post">
         @csrf
         <input type="text" name="name" placeholder="名前">
         <input type="submit" value="更新">
-      </form>
+      </form>-->
+
       <!--検索スペースここまで-->
       <div class="profile">
         <div class="my_img">
@@ -43,13 +45,16 @@
         </div>
         <div class="my_name_ev">
           <!--更新させたい-->
-          @foreach ($items as $item)
-          <form action="/update" method="get">
+          <form action="/update" method="post">
             @csrf
+            <!--どのユーザーが更新するのかid特定-->
+            <input type="hidden" name="id" value="{{$item->id}}">
+            <!--更新したい名前を記入-->
+            <input class="name_area" type="text" name="name" placeholder="名前">
+            <!--送信-->
+            <input type="submit" value="更新">
 
-            <input class="name_area" type="text" name="name" value="{{$items->name}}">
           </form>
-          @endforeach
           <p class="my_ev">評価</p>
           <p>★ ★ ★ ★ ★</p>
         </div>
