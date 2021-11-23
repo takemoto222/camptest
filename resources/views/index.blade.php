@@ -48,7 +48,7 @@
           <form action="/update/{id}" method="post">
             @csrf
             <!--どのユーザーが更新するのかid特定-->
-            <input type="hidden" name="name" value="{{$item->name}}">
+            <input type="hidden" name="id" value="{{$item->id}}">
             <!--更新したい名前を記入-->
             <input class="name_area" type="text" name="name" placeholder="名前">
             <!--送信-->

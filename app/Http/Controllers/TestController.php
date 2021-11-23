@@ -12,7 +12,7 @@ class TestController extends Controller
     public function index($id)
     {
         $items = Test::find($id); //テストからIDを取得、idを特定 $itemsに渡す
-        return view('index', ['items' => $items]);
+        return view('index', ['item' => $items]);
     }
     public function create(Request $request)
     {
