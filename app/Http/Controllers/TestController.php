@@ -11,7 +11,7 @@ class TestController extends Controller
     //練習
     public function index($id)
     {
-        $items = Test::find($id); //テストからIDを取得、idを特定 $itemの渡す
+        $items = Test::find($id); //テストからIDを取得、idを特定 $itemsに渡す
         return view('index', ['items' => $items]);
     }
     public function create(Request $request)

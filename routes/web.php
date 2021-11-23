@@ -8,8 +8,8 @@ use App\Http\Controllers\TestController;
 //Route::get('/', [TestController::class, 'index']);
 
 Route::get('/{id}', [TestController::class, 'index']);
-Route::post('/', [TestController::class, 'create']);
-Route::get('/update/{id}', [TestController::class, 'update']);
+Route::post('/{id}', [TestController::class, 'create']);
+Route::post('/update/{id}', [TestController::class, 'update']);
 //練習
 
 

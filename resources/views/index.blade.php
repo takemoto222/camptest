@@ -45,10 +45,10 @@
         </div>
         <div class="my_name_ev">
           <!--更新させたい-->
-          <form action="/update" method="post">
+          <form action="/update/{id}" method="post">
             @csrf
             <!--どのユーザーが更新するのかid特定-->
-            <input type="hidden" name="id" value="{{$item->id}}">
+            <input type="hidden" name="name" value="{{$item->name}}">
             <!--更新したい名前を記入-->
             <input class="name_area" type="text" name="name" placeholder="名前">
             <!--送信-->
